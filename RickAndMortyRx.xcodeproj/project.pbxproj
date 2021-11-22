@@ -7,23 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3ED2FA2745435D000A0A28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED2F92745435D000A0A28 /* MainViewController.swift */; };
+		FA3ED3E8274543DF000A0A28 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED3E7274543DF000A0A28 /* MainTableView.swift */; };
+		FA3ED3EC27454CE0000A0A28 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED3EB27454CE0000A0A28 /* CharacterModel.swift */; };
+		FA3ED3F02745C46B000A0A28 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED3EF2745C46B000A0A28 /* SectionModel.swift */; };
+		FA3ED3F22745CA76000A0A28 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED3F12745CA76000A0A28 /* MainViewModel.swift */; };
+		FA3ED5CC27467E8D000A0A28 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED5CB27467E8D000A0A28 /* MainInteractor.swift */; };
+		FA3ED5D12746871A000A0A28 /* MainApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED5D02746871A000A0A28 /* MainApi.swift */; };
+		FA3ED5D327468781000A0A28 /* MainApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED5D227468781000A0A28 /* MainApiProtocol.swift */; };
+		FA3ED5D5274687B5000A0A28 /* MainApiRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED5D4274687B5000A0A28 /* MainApiRepositoryProtocol.swift */; };
+		FA3ED5D7274687D5000A0A28 /* MainApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED5D6274687D5000A0A28 /* MainApiRepository.swift */; };
+		FA3ED5DD27468DAD000A0A28 /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED5DC27468DAC000A0A28 /* Extension + UIViewController.swift */; };
+		FA3ED5EA274696C6000A0A28 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA3ED5E9274696C6000A0A28 /* SnapKit */; };
+		FA3ED5ED2746972C000A0A28 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FA3ED5EC2746972C000A0A28 /* RxCocoa */; };
+		FA3ED5EF2746972C000A0A28 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FA3ED5EE2746972C000A0A28 /* RxRelay */; };
+		FA3ED5F12746972C000A0A28 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA3ED5F02746972C000A0A28 /* RxSwift */; };
+		FA4D8A4B27469B44001DD42B /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA4D8A4A27469B44001DD42B /* ReactorKit */; };
+		FA4D8A4E27469BEA001DD42B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = FA4D8A4D27469BEA001DD42B /* Moya */; };
+		FA4D8A5027469BEA001DD42B /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = FA4D8A4F27469BEA001DD42B /* ReactiveMoya */; };
+		FA4D8A5227469BEA001DD42B /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = FA4D8A5127469BEA001DD42B /* RxMoya */; };
+		FA4D8B4027469D06001DD42B /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = FA4D8B3F27469D06001DD42B /* Differentiator */; };
+		FA4D8B4227469D06001DD42B /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = FA4D8B4127469D06001DD42B /* RxDataSources */; };
+		FA4D8E052746DFE4001DD42B /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D8E042746DFE4001DD42B /* Extension + String.swift */; };
+		FA4D8E082746E6AC001DD42B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA4D8E072746E6AC001DD42B /* Kingfisher */; };
+		FA4D8E0A2746E6BB001DD42B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D8E092746E6BB001DD42B /* ImageService.swift */; };
+		FA4D8E0D2746F7B6001DD42B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D8E0C2746F7B6001DD42B /* CustomCell.swift */; };
+		FA4D8E0F2746FD21001DD42B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D8E0E2746FD21001DD42B /* DetailViewController.swift */; };
+		FA4EDF642747C20100206A35 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4EDF632747C20100206A35 /* Navigation.swift */; };
+		FA4EDF6C2747D13A00206A35 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FA4EDF6B2747D13A00206A35 /* Swinject */; };
+		FA7AA28F27453DD800BBD754 /* RickAndMortyTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7AA28E27453DD800BBD754 /* RickAndMortyTarget.swift */; };
+		FA90DE922748370A006E4831 /* BaseAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90DE912748370A006E4831 /* BaseAssemblyProtocol.swift */; };
+		FA90DE9527483792006E4831 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90DE9427483792006E4831 /* MainAssembly.swift */; };
+		FA90DE9927483B53006E4831 /* DIAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90DE9827483B53006E4831 /* DIAssembly.swift */; };
+		FA90DE9B27483BB3006E4831 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90DE9A27483BB3006E4831 /* Assembly.swift */; };
+		FA90DE9D27483C7B006E4831 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90DE9C27483C7B006E4831 /* MainCoordinator.swift */; };
+		FA90DE9F27483CA5006E4831 /* MainCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90DE9E27483CA5006E4831 /* MainCoordinatorProtocol.swift */; };
 		FAC0787127452A590033FCBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0787027452A590033FCBE /* AppDelegate.swift */; };
 		FAC0787327452A590033FCBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0787227452A590033FCBE /* SceneDelegate.swift */; };
-		FAC0787527452A590033FCBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0787427452A590033FCBE /* ViewController.swift */; };
-		FAC0787827452A5A0033FCBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC0787627452A5A0033FCBE /* Main.storyboard */; };
 		FAC0787A27452A5D0033FCBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC0787927452A5D0033FCBE /* Assets.xcassets */; };
 		FAC0787D27452A5D0033FCBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC0787B27452A5D0033FCBE /* LaunchScreen.storyboard */; };
+		FAC0788B27452B550033FCBE /* SceneDelegate + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0788A27452B550033FCBE /* SceneDelegate + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA3ED2F92745435D000A0A28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FA3ED3E7274543DF000A0A28 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		FA3ED3EB27454CE0000A0A28 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		FA3ED3EF2745C46B000A0A28 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		FA3ED3F12745CA76000A0A28 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FA3ED5CB27467E8D000A0A28 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		FA3ED5D02746871A000A0A28 /* MainApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApi.swift; sourceTree = "<group>"; };
+		FA3ED5D227468781000A0A28 /* MainApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApiProtocol.swift; sourceTree = "<group>"; };
+		FA3ED5D4274687B5000A0A28 /* MainApiRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApiRepositoryProtocol.swift; sourceTree = "<group>"; };
+		FA3ED5D6274687D5000A0A28 /* MainApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApiRepository.swift; sourceTree = "<group>"; };
+		FA3ED5DC27468DAC000A0A28 /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
+		FA4D8E042746DFE4001DD42B /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
+		FA4D8E092746E6BB001DD42B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		FA4D8E0C2746F7B6001DD42B /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		FA4D8E0E2746FD21001DD42B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FA4EDF632747C20100206A35 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		FA7AA28E27453DD800BBD754 /* RickAndMortyTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyTarget.swift; sourceTree = "<group>"; };
+		FA90DE912748370A006E4831 /* BaseAssemblyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAssemblyProtocol.swift; sourceTree = "<group>"; };
+		FA90DE9427483792006E4831 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		FA90DE9827483B53006E4831 /* DIAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIAssembly.swift; sourceTree = "<group>"; };
+		FA90DE9A27483BB3006E4831 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		FA90DE9C27483C7B006E4831 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FA90DE9E27483CA5006E4831 /* MainCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		FAC0786D27452A590033FCBE /* RickAndMortyRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC0787027452A590033FCBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC0787227452A590033FCBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAC0787427452A590033FCBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FAC0787727452A5A0033FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAC0787927452A5D0033FCBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC0787C27452A5D0033FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC0787E27452A5D0033FCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC0788A27452B550033FCBE /* SceneDelegate + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +87,147 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4D8A5027469BEA001DD42B /* ReactiveMoya in Frameworks */,
+				FA3ED5ED2746972C000A0A28 /* RxCocoa in Frameworks */,
+				FA3ED5F12746972C000A0A28 /* RxSwift in Frameworks */,
+				FA4D8B4227469D06001DD42B /* RxDataSources in Frameworks */,
+				FA4D8A4E27469BEA001DD42B /* Moya in Frameworks */,
+				FA3ED5EF2746972C000A0A28 /* RxRelay in Frameworks */,
+				FA4D8A4B27469B44001DD42B /* ReactorKit in Frameworks */,
+				FA4D8A5227469BEA001DD42B /* RxMoya in Frameworks */,
+				FA4D8E082746E6AC001DD42B /* Kingfisher in Frameworks */,
+				FA4D8B4027469D06001DD42B /* Differentiator in Frameworks */,
+				FA3ED5EA274696C6000A0A28 /* SnapKit in Frameworks */,
+				FA4EDF6C2747D13A00206A35 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA3ED2FB27454362000A0A28 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED3E7274543DF000A0A28 /* MainTableView.swift */,
+				FA4D8E0B2746F798001DD42B /* Cell */,
+			);
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		FA3ED5CD274686EB000A0A28 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED5CB27467E8D000A0A28 /* MainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FA3ED5CE274686F0000A0A28 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FA90DE9627483A2E006E4831 /* Main */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FA3ED5CF274686F6000A0A28 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				FA90DE9727483A3F006E4831 /* Main */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		FA3ED5DB27468D9E000A0A28 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED5DC27468DAC000A0A28 /* Extension + UIViewController.swift */,
+				FA4D8E042746DFE4001DD42B /* Extension + String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA4D8E0B2746F798001DD42B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA4D8E0C2746F7B6001DD42B /* CustomCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA4EDF552747C04F00206A35 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				FA90DE9827483B53006E4831 /* DIAssembly.swift */,
+				FA4EDF5C2747C15400206A35 /* Assemly */,
+				FA90DE90274836FB006E4831 /* Base */,
+				FA3ED5CE274686F0000A0A28 /* Repository */,
+				FA3ED5CF274686F6000A0A28 /* Api */,
+				FA4EDF602747C1AE00206A35 /* Coordinator */,
+				FA4EDF5F2747C19100206A35 /* Navigation */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		FA4EDF5C2747C15400206A35 /* Assemly */ = {
+			isa = PBXGroup;
+			children = (
+				FA90DE9A27483BB3006E4831 /* Assembly.swift */,
+			);
+			path = Assemly;
+			sourceTree = "<group>";
+		};
+		FA4EDF5F2747C19100206A35 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FA4EDF632747C20100206A35 /* Navigation.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FA4EDF602747C1AE00206A35 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FA90DE9C27483C7B006E4831 /* MainCoordinator.swift */,
+				FA90DE9E27483CA5006E4831 /* MainCoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FA90DE90274836FB006E4831 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FA90DE912748370A006E4831 /* BaseAssemblyProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FA90DE9327483786006E4831 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				FA90DE9427483792006E4831 /* MainAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		FA90DE9627483A2E006E4831 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED5D4274687B5000A0A28 /* MainApiRepositoryProtocol.swift */,
+				FA3ED5D6274687D5000A0A28 /* MainApiRepository.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FA90DE9727483A3F006E4831 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED5D02746871A000A0A28 /* MainApi.swift */,
+				FA3ED5D227468781000A0A28 /* MainApiProtocol.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		FAC0786427452A590033FCBE = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +247,122 @@
 		FAC0786F27452A590033FCBE /* RickAndMortyRx */ = {
 			isa = PBXGroup;
 			children = (
+				FA4EDF552747C04F00206A35 /* DI */,
+				FAC0788627452AAA0033FCBE /* Screens */,
+				FAC0788527452A9F0033FCBE /* Services */,
+				FAC0788427452A6C0033FCBE /* Resources */,
+			);
+			path = RickAndMortyRx;
+			sourceTree = "<group>";
+		};
+		FAC0788427452A6C0033FCBE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED5DB27468D9E000A0A28 /* Extensions */,
+				FAC0788927452B120033FCBE /* Fonts */,
+				FAC0788827452B050033FCBE /* Images */,
+				FAC0788727452AFE0033FCBE /* Supporting Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FAC0788527452A9F0033FCBE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA7AA28E27453DD800BBD754 /* RickAndMortyTarget.swift */,
+				FA4D8E092746E6BB001DD42B /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FAC0788627452AAA0033FCBE /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0788C27452B920033FCBE /* Main */,
+				FAC0788D27452B970033FCBE /* Details */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FAC0788727452AFE0033FCBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				FAC0787027452A590033FCBE /* AppDelegate.swift */,
 				FAC0787227452A590033FCBE /* SceneDelegate.swift */,
-				FAC0787427452A590033FCBE /* ViewController.swift */,
-				FAC0787627452A5A0033FCBE /* Main.storyboard */,
-				FAC0787927452A5D0033FCBE /* Assets.xcassets */,
+				FAC0788A27452B550033FCBE /* SceneDelegate + Extension.swift */,
 				FAC0787B27452A5D0033FCBE /* LaunchScreen.storyboard */,
 				FAC0787E27452A5D0033FCBE /* Info.plist */,
 			);
-			path = RickAndMortyRx;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAC0788827452B050033FCBE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0787927452A5D0033FCBE /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		FAC0788927452B120033FCBE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FAC0788C27452B920033FCBE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA90DE9327483786006E4831 /* Assembly */,
+				FA3ED5CD274686EB000A0A28 /* Interactor */,
+				FAC0788E27452BA20033FCBE /* Model */,
+				FAC0788F27452BA60033FCBE /* View */,
+				FAC0789027452BAA0033FCBE /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FAC0788D27452B970033FCBE /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FAC0789227452BC70033FCBE /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		FAC0788E27452BA20033FCBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED3EB27454CE0000A0A28 /* CharacterModel.swift */,
+				FA3ED3EF2745C46B000A0A28 /* SectionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAC0788F27452BA60033FCBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED2F92745435D000A0A28 /* MainViewController.swift */,
+				FA3ED2FB27454362000A0A28 /* Table View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAC0789027452BAA0033FCBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA3ED3F12745CA76000A0A28 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAC0789227452BC70033FCBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4D8E0E2746FD21001DD42B /* DetailViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +381,20 @@
 			dependencies = (
 			);
 			name = RickAndMortyRx;
+			packageProductDependencies = (
+				FA3ED5E9274696C6000A0A28 /* SnapKit */,
+				FA3ED5EC2746972C000A0A28 /* RxCocoa */,
+				FA3ED5EE2746972C000A0A28 /* RxRelay */,
+				FA3ED5F02746972C000A0A28 /* RxSwift */,
+				FA4D8A4A27469B44001DD42B /* ReactorKit */,
+				FA4D8A4D27469BEA001DD42B /* Moya */,
+				FA4D8A4F27469BEA001DD42B /* ReactiveMoya */,
+				FA4D8A5127469BEA001DD42B /* RxMoya */,
+				FA4D8B3F27469D06001DD42B /* Differentiator */,
+				FA4D8B4127469D06001DD42B /* RxDataSources */,
+				FA4D8E072746E6AC001DD42B /* Kingfisher */,
+				FA4EDF6B2747D13A00206A35 /* Swinject */,
+			);
 			productName = RickAndMortyRx;
 			productReference = FAC0786D27452A590033FCBE /* RickAndMortyRx.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +423,15 @@
 				Base,
 			);
 			mainGroup = FAC0786427452A590033FCBE;
+			packageReferences = (
+				FA3ED5E8274696C6000A0A28 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FA3ED5EB2746972C000A0A28 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				FA4D8A4927469B44001DD42B /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				FA4D8A4C27469BEA001DD42B /* XCRemoteSwiftPackageReference "Moya" */,
+				FA4D8B3E27469D06001DD42B /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				FA4D8E062746E6AC001DD42B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				FA4EDF6A2747D13900206A35 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = FAC0786E27452A590033FCBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +448,6 @@
 			files = (
 				FAC0787D27452A5D0033FCBE /* LaunchScreen.storyboard in Resources */,
 				FAC0787A27452A5D0033FCBE /* Assets.xcassets in Resources */,
-				FAC0787827452A5A0033FCBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +458,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC0787527452A590033FCBE /* ViewController.swift in Sources */,
+				FA90DE9927483B53006E4831 /* DIAssembly.swift in Sources */,
 				FAC0787127452A590033FCBE /* AppDelegate.swift in Sources */,
+				FA3ED3E8274543DF000A0A28 /* MainTableView.swift in Sources */,
+				FA3ED3F22745CA76000A0A28 /* MainViewModel.swift in Sources */,
+				FA90DE9F27483CA5006E4831 /* MainCoordinatorProtocol.swift in Sources */,
+				FA3ED3F02745C46B000A0A28 /* SectionModel.swift in Sources */,
+				FA3ED5D5274687B5000A0A28 /* MainApiRepositoryProtocol.swift in Sources */,
+				FA3ED5DD27468DAD000A0A28 /* Extension + UIViewController.swift in Sources */,
+				FAC0788B27452B550033FCBE /* SceneDelegate + Extension.swift in Sources */,
+				FA4D8E0F2746FD21001DD42B /* DetailViewController.swift in Sources */,
+				FA90DE922748370A006E4831 /* BaseAssemblyProtocol.swift in Sources */,
+				FA3ED5D7274687D5000A0A28 /* MainApiRepository.swift in Sources */,
+				FA4D8E0D2746F7B6001DD42B /* CustomCell.swift in Sources */,
+				FA7AA28F27453DD800BBD754 /* RickAndMortyTarget.swift in Sources */,
+				FA3ED5D12746871A000A0A28 /* MainApi.swift in Sources */,
+				FA3ED3EC27454CE0000A0A28 /* CharacterModel.swift in Sources */,
+				FA4D8E0A2746E6BB001DD42B /* ImageService.swift in Sources */,
 				FAC0787327452A590033FCBE /* SceneDelegate.swift in Sources */,
+				FA4EDF642747C20100206A35 /* Navigation.swift in Sources */,
+				FA3ED2FA2745435D000A0A28 /* MainViewController.swift in Sources */,
+				FA3ED5CC27467E8D000A0A28 /* MainInteractor.swift in Sources */,
+				FA90DE9B27483BB3006E4831 /* Assembly.swift in Sources */,
+				FA4D8E052746DFE4001DD42B /* Extension + String.swift in Sources */,
+				FA90DE9D27483C7B006E4831 /* MainCoordinator.swift in Sources */,
+				FA3ED5D327468781000A0A28 /* MainApiProtocol.swift in Sources */,
+				FA90DE9527483792006E4831 /* MainAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FAC0787627452A5A0033FCBE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAC0787727452A5A0033FCBE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FAC0787B27452A5D0033FCBE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,12 +626,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DCJXSY8PS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RickAndMortyRx/Info.plist;
+				INFOPLIST_FILE = "RickAndMortyRx/Resources/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,12 +654,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2DCJXSY8PS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RickAndMortyRx/Info.plist;
+				INFOPLIST_FILE = "RickAndMortyRx/Resources/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +695,128 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA3ED5E8274696C6000A0A28 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FA3ED5EB2746972C000A0A28 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.1.3;
+			};
+		};
+		FA4D8A4927469B44001DD42B /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RTLabsForks/ReactorKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.1;
+			};
+		};
+		FA4D8A4C27469BEA001DD42B /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = exactVersion;
+				version = 14.0.1;
+			};
+		};
+		FA4D8B3E27469D06001DD42B /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.1;
+			};
+		};
+		FA4D8E062746E6AC001DD42B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = exactVersion;
+				version = 7.1.1;
+			};
+		};
+		FA4EDF6A2747D13900206A35 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA3ED5E9274696C6000A0A28 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3ED5E8274696C6000A0A28 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FA3ED5EC2746972C000A0A28 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3ED5EB2746972C000A0A28 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FA3ED5EE2746972C000A0A28 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3ED5EB2746972C000A0A28 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		FA3ED5F02746972C000A0A28 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3ED5EB2746972C000A0A28 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		FA4D8A4A27469B44001DD42B /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4D8A4927469B44001DD42B /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		FA4D8A4D27469BEA001DD42B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4D8A4C27469BEA001DD42B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		FA4D8A4F27469BEA001DD42B /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4D8A4C27469BEA001DD42B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		FA4D8A5127469BEA001DD42B /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4D8A4C27469BEA001DD42B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		FA4D8B3F27469D06001DD42B /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4D8B3E27469D06001DD42B /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		FA4D8B4127469D06001DD42B /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4D8B3E27469D06001DD42B /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+		FA4D8E072746E6AC001DD42B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4D8E062746E6AC001DD42B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		FA4EDF6B2747D13A00206A35 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4EDF6A2747D13900206A35 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAC0786527452A590033FCBE /* Project object */;
 }
