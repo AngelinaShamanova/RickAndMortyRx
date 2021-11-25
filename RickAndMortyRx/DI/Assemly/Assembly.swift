@@ -16,7 +16,8 @@ extension Assembler {
         let assembler = Assembler([
             DIAssembly(),
             AppAssembly(),
-            MainAssembly()
+            MainAssembly(),
+            DetailAssembly()
             ], container: container)
         return assembler
     }()

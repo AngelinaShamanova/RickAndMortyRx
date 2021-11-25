@@ -15,22 +15,25 @@ import Moya
 import SnapKit
 
 protocol MainViewControllerDelegate: AnyObject {
-    func showDetailInfo(item: CharacterModel)
+    
+    func controller(_ controller: MainViewController,
+                    askShowDetailInfo item: CharacterModel,
+                    index: Int)
 }
 
 class MainViewController: UIViewController, View {
     
-    typealias Reactor = MainViewModel
-    private var tableView = MainTableView()
-    private var viewModel: MainViewModel
-    var disposeBag = DisposeBag()
-    weak var delegate: MainViewControllerDelegate?
+    typealias DataSource = RxTableViewSectionedReloadDataSource<SectionModel>
     
-    private let provider = MoyaProvider<RickAndMortyTarget>(plugins: [NetworkLoggerPlugin()])
+    weak var coordinator: MainViewControllerDelegate?
+    
+    var disposeBag = DisposeBag()
+    
+    var tableView = MainTableView()
     
     public init(viewModel: MainViewModel) {
-        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        reactor = viewModel
     }
     
     required init?(coder: NSCoder) {
@@ -46,8 +49,8 @@ class MainViewController: UIViewController, View {
         super.viewDidLoad()
         setupNavigationBar()
         
-        reactor = viewModel
-        tableView.register(CustomCell.self, forCellReuseIdentifier: "\(CustomCell.self)")
+        tableView.register(SkeletonCell.self, forCellReuseIdentifier: "\(SkeletonCell.self)")
+        tableView.register(MainTableViewCell.self, forCellReuseIdentifier: "\(MainTableViewCell.self)")
         bindDataSource()
         reactor?.action.onNext(.getAllCharacters)
     }
@@ -57,14 +60,12 @@ class MainViewController: UIViewController, View {
         navigationController?.navigationBar.tintColor = .white
         title = "Rick & Morty"
         
-        addNavigationBarButton()
+        addNavigationBarButton(imageName: "arrowtriangle.up", action: #selector(scrollToFirstRow))
+        addNavigationBarButton(imageName: "", title: "Revert Chars", action: #selector(revertRemovedCharacters), direction: .leading)
     }
     
-    private func addNavigationBarButton() {
-        let button = UIBarButtonItem(image: UIImage(systemName: "arrowtriangle.up"), style: .plain, target: self, action: #selector(scrollToFirstRow))
-        button.tintColor = .magenta.withAlphaComponent(0.5)
-        
-        navigationItem.rightBarButtonItem = button
+    @objc private func revertRemovedCharacters() {
+        reactor?.action.onNext(.revertRemovedCharacters)
     }
     
     @objc private func scrollToFirstRow() {
@@ -73,23 +74,43 @@ class MainViewController: UIViewController, View {
         }
     }
     
-    private func bindDataSource() {
-        let dataSource = RxTableViewSectionedReloadDataSource<SectionModel>(
-            configureCell: { section, tableView, indexPath, item in
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(CustomCell.self)", for: indexPath) as? CustomCell else { return UITableViewCell() }
-                cell.configure(with: item)
-                return cell
-            })
-        
-        setupHeader(dataSource: dataSource)
+    private func showDetailInfo(item: CharacterModel, index: Int) {
+        coordinator?.controller(self, askShowDetailInfo: item, index: index)
     }
     
-    private func setupHeader(dataSource: RxTableViewSectionedReloadDataSource<SectionModel>) {
+    func removeCharacter(index: Int) {
+        reactor?.action.onNext(.makeRemove(index))
+    }
+    
+    private func bindDataSource() {
+        
+        let dataSource = DataSource(configureCell: { section, tableView, indexPath, item in
+            
+            switch item {
+            case .skeleton:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "\(SkeletonCell.self)", for: indexPath) as! SkeletonCell
+                cell.content.showAnimatedGradientSkeleton()
+                return cell
+            case .character(let character):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "\(MainTableViewCell.self)", for: indexPath) as! MainTableViewCell
+                cell.configure(with: character)
+                return cell
+            default: return UITableViewCell()
+            }
+        })
+        
+        setupTable(dataSource: dataSource)
+    }
+    
+    private func setupTable(dataSource: DataSource) {
+        
+        dataSource.canEditRowAtIndexPath = { _, _  in return true }
+        
         dataSource.titleForHeaderInSection = { dataSource, index in
             return dataSource.sectionModels[index].header
         }
         
-        viewModel.state
+        reactor?.state
             .map { $0.sections }
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
@@ -97,23 +118,42 @@ class MainViewController: UIViewController, View {
     
     func bind(reactor: MainViewModel) {
         reactor.state
+            .map { $0.isRefreshing }
+            .distinctUntilChanged()
+            .bind(to: tableView.refreshIndicator.rx.isRefreshing)
+            .disposed(by: disposeBag)
+        
+        tableView.refreshIndicator.rx.controlEvent(.valueChanged)
+            .map { .refresh }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        reactor.state
             .map { $0.error }
             .compactMap { $0 }
             .subscribe(onNext: { [unowned self] error in
-                self.showAlert(error) { [weak self] _ in
-                    self?.viewModel.action.onNext(.errorAccepted)
+                self.show(error) { _ in
+                    reactor.action.onNext(.errorAccepted)
                 }
             }).disposed(by: disposeBag)
         
-        tableView.rx.itemSelected
-            .subscribe(onNext: { [unowned self] (indexPath) in
+        Observable.zip(tableView.rx.itemSelected,
+                       tableView.rx.modelSelected(MainTableItem.self))
+            .subscribe(onNext: { [unowned self] (indexPath, item) in
+                
                 self.tableView.deselectRow(at: indexPath, animated: true)
+                
+                switch item {
+                case .character(let character):
+                    self.showDetailInfo(item: character, index: indexPath.row)
+                default: break
+                }
             })
             .disposed(by: disposeBag)
         
-        tableView.rx.modelSelected(CharacterModel.self)
-            .subscribe(onNext: { [unowned self] (item) in
-                self.showDetailInfo(item: item)
+        tableView.rx.itemDeleted
+            .subscribe(onNext: { [unowned self] (indexPath) in
+                self.removeCharacter(index: indexPath.row)
             })
             .disposed(by: disposeBag)
     
@@ -125,15 +165,8 @@ class MainViewController: UIViewController, View {
             }
             .distinctUntilChanged()
             .filter { $0 }
-            .map { _ in Reactor.Action.getAllCharacters }
+            .map { _ in Reactor.Action.addCharacters }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-    }
-}
-
-extension MainViewController {
-    
-    func showDetailInfo(item: CharacterModel) {
-        delegate?.showDetailInfo(item: item)
     }
 }

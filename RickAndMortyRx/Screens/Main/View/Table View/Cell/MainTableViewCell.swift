@@ -1,5 +1,5 @@
 //
-//  CustomCell.swift
+//  MainTableViewCell.swift
 //  RickAndMortyRx
 //
 //  Created by Angelina on 19.11.2021.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CustomCell: UITableViewCell {
+class MainTableViewCell: UITableViewCell {
     
     let characterAvatar: UIImageView = {
         let imageView = UIImageView()

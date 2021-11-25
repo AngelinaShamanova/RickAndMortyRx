@@ -8,6 +8,7 @@
 import Foundation
 
 extension String {
+    
     mutating func getNumber() -> Int {
         self.removeFirst(48)
         return Int(self) ?? 0

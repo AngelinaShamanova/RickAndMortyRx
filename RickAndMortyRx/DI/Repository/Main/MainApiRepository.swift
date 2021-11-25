@@ -19,6 +19,4 @@ final public class MainApiRepository: MainApiRepositoryProtocol {
     func getAllCharacters(page: Int? = nil) -> Single<ResultModel> {
         return api.getAllCharacters(page: page).map(ResultModel.self)
     }
-    
-    
 }

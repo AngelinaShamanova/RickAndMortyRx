@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2562F4274E5DBB00A64511 /* MainTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2562F3274E5DBB00A64511 /* MainTableItem.swift */; };
+		FA2562F6274E683F00A64511 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2562F5274E683F00A64511 /* SkeletonCell.swift */; };
+		FA2562F9274E689600A64511 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = FA2562F8274E689600A64511 /* SkeletonView */; };
 		FA3ED2FA2745435D000A0A28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED2F92745435D000A0A28 /* MainViewController.swift */; };
 		FA3ED3E8274543DF000A0A28 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED3E7274543DF000A0A28 /* MainTableView.swift */; };
 		FA3ED3EC27454CE0000A0A28 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3ED3EB27454CE0000A0A28 /* CharacterModel.swift */; };
@@ -31,10 +34,13 @@
 		FA4D8E052746DFE4001DD42B /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D8E042746DFE4001DD42B /* Extension + String.swift */; };
 		FA4D8E082746E6AC001DD42B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA4D8E072746E6AC001DD42B /* Kingfisher */; };
 		FA4D8E0A2746E6BB001DD42B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D8E092746E6BB001DD42B /* ImageService.swift */; };
-		FA4D8E0D2746F7B6001DD42B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D8E0C2746F7B6001DD42B /* CustomCell.swift */; };
+		FA4D8E0D2746F7B6001DD42B /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D8E0C2746F7B6001DD42B /* MainTableViewCell.swift */; };
 		FA4D8E0F2746FD21001DD42B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D8E0E2746FD21001DD42B /* DetailViewController.swift */; };
 		FA4EDF642747C20100206A35 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4EDF632747C20100206A35 /* Navigation.swift */; };
 		FA4EDF6C2747D13A00206A35 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = FA4EDF6B2747D13A00206A35 /* Swinject */; };
+		FA70C09D274D64530014B6B5 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70C09C274D64530014B6B5 /* DetailViewModel.swift */; };
+		FA70C09F274D645F0014B6B5 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70C09E274D645F0014B6B5 /* DetailInteractor.swift */; };
+		FA70C0A2274D65EE0014B6B5 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70C0A1274D65EE0014B6B5 /* DetailAssembly.swift */; };
 		FA7AA28F27453DD800BBD754 /* RickAndMortyTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7AA28E27453DD800BBD754 /* RickAndMortyTarget.swift */; };
 		FA90DE922748370A006E4831 /* BaseAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90DE912748370A006E4831 /* BaseAssemblyProtocol.swift */; };
 		FA90DE9527483792006E4831 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90DE9427483792006E4831 /* MainAssembly.swift */; };
@@ -47,9 +53,16 @@
 		FAC0787A27452A5D0033FCBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC0787927452A5D0033FCBE /* Assets.xcassets */; };
 		FAC0787D27452A5D0033FCBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC0787B27452A5D0033FCBE /* LaunchScreen.storyboard */; };
 		FAC0788B27452B550033FCBE /* SceneDelegate + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0788A27452B550033FCBE /* SceneDelegate + Extension.swift */; };
+		FAC31EB9274D957C001056AC /* MainViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC31EB8274D957C001056AC /* MainViewController + Extension.swift */; };
+		FAC32091274D9B85001056AC /* DetailApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC32090274D9B85001056AC /* DetailApi.swift */; };
+		FAC32093274D9B90001056AC /* DetailApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC32092274D9B90001056AC /* DetailApiProtocol.swift */; };
+		FAC32096274D9BDB001056AC /* DetailApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC32095274D9BDB001056AC /* DetailApiRepository.swift */; };
+		FAC32098274D9BE5001056AC /* DetailApiRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC32097274D9BE5001056AC /* DetailApiRepositoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2562F3274E5DBB00A64511 /* MainTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableItem.swift; sourceTree = "<group>"; };
+		FA2562F5274E683F00A64511 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		FA3ED2F92745435D000A0A28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FA3ED3E7274543DF000A0A28 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		FA3ED3EB27454CE0000A0A28 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
@@ -63,9 +76,12 @@
 		FA3ED5DC27468DAC000A0A28 /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
 		FA4D8E042746DFE4001DD42B /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		FA4D8E092746E6BB001DD42B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		FA4D8E0C2746F7B6001DD42B /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		FA4D8E0C2746F7B6001DD42B /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		FA4D8E0E2746FD21001DD42B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FA4EDF632747C20100206A35 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		FA70C09C274D64530014B6B5 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		FA70C09E274D645F0014B6B5 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		FA70C0A1274D65EE0014B6B5 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
 		FA7AA28E27453DD800BBD754 /* RickAndMortyTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyTarget.swift; sourceTree = "<group>"; };
 		FA90DE912748370A006E4831 /* BaseAssemblyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAssemblyProtocol.swift; sourceTree = "<group>"; };
 		FA90DE9427483792006E4831 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
@@ -80,6 +96,11 @@
 		FAC0787C27452A5D0033FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC0787E27452A5D0033FCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC0788A27452B550033FCBE /* SceneDelegate + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate + Extension.swift"; sourceTree = "<group>"; };
+		FAC31EB8274D957C001056AC /* MainViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + Extension.swift"; sourceTree = "<group>"; };
+		FAC32090274D9B85001056AC /* DetailApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailApi.swift; sourceTree = "<group>"; };
+		FAC32092274D9B90001056AC /* DetailApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailApiProtocol.swift; sourceTree = "<group>"; };
+		FAC32095274D9BDB001056AC /* DetailApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailApiRepository.swift; sourceTree = "<group>"; };
+		FAC32097274D9BE5001056AC /* DetailApiRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailApiRepositoryProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +115,7 @@
 				FA4D8A4E27469BEA001DD42B /* Moya in Frameworks */,
 				FA3ED5EF2746972C000A0A28 /* RxRelay in Frameworks */,
 				FA4D8A4B27469B44001DD42B /* ReactorKit in Frameworks */,
+				FA2562F9274E689600A64511 /* SkeletonView in Frameworks */,
 				FA4D8A5227469BEA001DD42B /* RxMoya in Frameworks */,
 				FA4D8E082746E6AC001DD42B /* Kingfisher in Frameworks */,
 				FA4D8B4027469D06001DD42B /* Differentiator in Frameworks */,
@@ -105,6 +127,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA2562FA274EE6EC00A64511 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FA7AA28E27453DD800BBD754 /* RickAndMortyTarget.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FA2562FB274EE6F200A64511 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				FA4D8E092746E6BB001DD42B /* ImageService.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		FA3ED2FB27454362000A0A28 /* Table View */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +163,7 @@
 		FA3ED5CE274686F0000A0A28 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				FAC32094274D9BC9001056AC /* Detail */,
 				FA90DE9627483A2E006E4831 /* Main */,
 			);
 			path = Repository;
@@ -133,6 +172,7 @@
 		FA3ED5CF274686F6000A0A28 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				FA70C0A5274D66860014B6B5 /* Detail */,
 				FA90DE9727483A3F006E4831 /* Main */,
 			);
 			path = Api;
@@ -150,7 +190,8 @@
 		FA4D8E0B2746F798001DD42B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				FA4D8E0C2746F7B6001DD42B /* CustomCell.swift */,
+				FA4D8E0C2746F7B6001DD42B /* MainTableViewCell.swift */,
+				FA2562F5274E683F00A64511 /* SkeletonCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -161,8 +202,8 @@
 				FA90DE9827483B53006E4831 /* DIAssembly.swift */,
 				FA4EDF5C2747C15400206A35 /* Assemly */,
 				FA90DE90274836FB006E4831 /* Base */,
-				FA3ED5CE274686F0000A0A28 /* Repository */,
 				FA3ED5CF274686F6000A0A28 /* Api */,
+				FA3ED5CE274686F0000A0A28 /* Repository */,
 				FA4EDF602747C1AE00206A35 /* Coordinator */,
 				FA4EDF5F2747C19100206A35 /* Navigation */,
 			);
@@ -173,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				FA90DE9A27483BB3006E4831 /* Assembly.swift */,
+				FA70C0A3274D662A0014B6B5 /* Main */,
+				FA70C0A4274D66310014B6B5 /* Detail */,
 			);
 			path = Assemly;
 			sourceTree = "<group>";
@@ -194,20 +237,53 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		FA70C09A274D64390014B6B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA70C09C274D64530014B6B5 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA70C09B274D64400014B6B5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FA70C09E274D645F0014B6B5 /* DetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FA70C0A3274D662A0014B6B5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA90DE9427483792006E4831 /* MainAssembly.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FA70C0A4274D66310014B6B5 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FA70C0A1274D65EE0014B6B5 /* DetailAssembly.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		FA70C0A5274D66860014B6B5 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FAC32090274D9B85001056AC /* DetailApi.swift */,
+				FAC32092274D9B90001056AC /* DetailApiProtocol.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		FA90DE90274836FB006E4831 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				FA90DE912748370A006E4831 /* BaseAssemblyProtocol.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		FA90DE9327483786006E4831 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				FA90DE9427483792006E4831 /* MainAssembly.swift */,
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		FA90DE9627483A2E006E4831 /* Main */ = {
@@ -269,8 +345,8 @@
 		FAC0788527452A9F0033FCBE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				FA7AA28E27453DD800BBD754 /* RickAndMortyTarget.swift */,
-				FA4D8E092746E6BB001DD42B /* ImageService.swift */,
+				FA2562FB274EE6F200A64511 /* Image */,
+				FA2562FA274EE6EC00A64511 /* Network */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -314,7 +390,6 @@
 		FAC0788C27452B920033FCBE /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FA90DE9327483786006E4831 /* Assembly */,
 				FA3ED5CD274686EB000A0A28 /* Interactor */,
 				FAC0788E27452BA20033FCBE /* Model */,
 				FAC0788F27452BA60033FCBE /* View */,
@@ -326,6 +401,8 @@
 		FAC0788D27452B970033FCBE /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				FA70C09B274D64400014B6B5 /* Interactor */,
+				FA70C09A274D64390014B6B5 /* ViewModel */,
 				FAC0789227452BC70033FCBE /* View */,
 			);
 			path = Details;
@@ -336,6 +413,7 @@
 			children = (
 				FA3ED3EB27454CE0000A0A28 /* CharacterModel.swift */,
 				FA3ED3EF2745C46B000A0A28 /* SectionModel.swift */,
+				FA2562F3274E5DBB00A64511 /* MainTableItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				FA3ED2F92745435D000A0A28 /* MainViewController.swift */,
+				FAC31EB8274D957C001056AC /* MainViewController + Extension.swift */,
 				FA3ED2FB27454362000A0A28 /* Table View */,
 			);
 			path = View;
@@ -363,6 +442,15 @@
 				FA4D8E0E2746FD21001DD42B /* DetailViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FAC32094274D9BC9001056AC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FAC32095274D9BDB001056AC /* DetailApiRepository.swift */,
+				FAC32097274D9BE5001056AC /* DetailApiRepositoryProtocol.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +482,7 @@
 				FA4D8B4127469D06001DD42B /* RxDataSources */,
 				FA4D8E072746E6AC001DD42B /* Kingfisher */,
 				FA4EDF6B2747D13A00206A35 /* Swinject */,
+				FA2562F8274E689600A64511 /* SkeletonView */,
 			);
 			productName = RickAndMortyRx;
 			productReference = FAC0786D27452A590033FCBE /* RickAndMortyRx.app */;
@@ -431,6 +520,7 @@
 				FA4D8B3E27469D06001DD42B /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				FA4D8E062746E6AC001DD42B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				FA4EDF6A2747D13900206A35 /* XCRemoteSwiftPackageReference "Swinject" */,
+				FA2562F7274E689500A64511 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = FAC0786E27452A590033FCBE /* Products */;
 			projectDirPath = "";
@@ -459,29 +549,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA90DE9927483B53006E4831 /* DIAssembly.swift in Sources */,
+				FAC31EB9274D957C001056AC /* MainViewController + Extension.swift in Sources */,
 				FAC0787127452A590033FCBE /* AppDelegate.swift in Sources */,
 				FA3ED3E8274543DF000A0A28 /* MainTableView.swift in Sources */,
 				FA3ED3F22745CA76000A0A28 /* MainViewModel.swift in Sources */,
+				FA70C09D274D64530014B6B5 /* DetailViewModel.swift in Sources */,
 				FA90DE9F27483CA5006E4831 /* MainCoordinatorProtocol.swift in Sources */,
 				FA3ED3F02745C46B000A0A28 /* SectionModel.swift in Sources */,
 				FA3ED5D5274687B5000A0A28 /* MainApiRepositoryProtocol.swift in Sources */,
 				FA3ED5DD27468DAD000A0A28 /* Extension + UIViewController.swift in Sources */,
 				FAC0788B27452B550033FCBE /* SceneDelegate + Extension.swift in Sources */,
+				FAC32096274D9BDB001056AC /* DetailApiRepository.swift in Sources */,
 				FA4D8E0F2746FD21001DD42B /* DetailViewController.swift in Sources */,
+				FA70C09F274D645F0014B6B5 /* DetailInteractor.swift in Sources */,
 				FA90DE922748370A006E4831 /* BaseAssemblyProtocol.swift in Sources */,
 				FA3ED5D7274687D5000A0A28 /* MainApiRepository.swift in Sources */,
-				FA4D8E0D2746F7B6001DD42B /* CustomCell.swift in Sources */,
+				FA4D8E0D2746F7B6001DD42B /* MainTableViewCell.swift in Sources */,
 				FA7AA28F27453DD800BBD754 /* RickAndMortyTarget.swift in Sources */,
+				FAC32093274D9B90001056AC /* DetailApiProtocol.swift in Sources */,
 				FA3ED5D12746871A000A0A28 /* MainApi.swift in Sources */,
 				FA3ED3EC27454CE0000A0A28 /* CharacterModel.swift in Sources */,
+				FAC32098274D9BE5001056AC /* DetailApiRepositoryProtocol.swift in Sources */,
+				FA2562F6274E683F00A64511 /* SkeletonCell.swift in Sources */,
 				FA4D8E0A2746E6BB001DD42B /* ImageService.swift in Sources */,
 				FAC0787327452A590033FCBE /* SceneDelegate.swift in Sources */,
+				FA70C0A2274D65EE0014B6B5 /* DetailAssembly.swift in Sources */,
 				FA4EDF642747C20100206A35 /* Navigation.swift in Sources */,
 				FA3ED2FA2745435D000A0A28 /* MainViewController.swift in Sources */,
+				FA2562F4274E5DBB00A64511 /* MainTableItem.swift in Sources */,
 				FA3ED5CC27467E8D000A0A28 /* MainInteractor.swift in Sources */,
 				FA90DE9B27483BB3006E4831 /* Assembly.swift in Sources */,
 				FA4D8E052746DFE4001DD42B /* Extension + String.swift in Sources */,
 				FA90DE9D27483C7B006E4831 /* MainCoordinator.swift in Sources */,
+				FAC32091274D9B85001056AC /* DetailApi.swift in Sources */,
 				FA3ED5D327468781000A0A28 /* MainApiProtocol.swift in Sources */,
 				FA90DE9527483792006E4831 /* MainAssembly.swift in Sources */,
 			);
@@ -552,7 +652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -607,7 +707,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -697,6 +797,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FA2562F7274E689500A64511 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
 		FA3ED5E8274696C6000A0A28 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -756,6 +864,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA2562F8274E689600A64511 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA2562F7274E689500A64511 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
 		FA3ED5E9274696C6000A0A28 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA3ED5E8274696C6000A0A28 /* XCRemoteSwiftPackageReference "SnapKit" */;

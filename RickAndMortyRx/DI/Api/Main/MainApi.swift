@@ -9,6 +9,8 @@ import RxSwift
 import RxCocoa
 import Moya
 import RxMoya
+import Foundation
+import UIKit
 
 class MainApi: MainApiProtocol {
     

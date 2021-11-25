@@ -9,7 +9,7 @@ import RxDataSources
 
 struct SectionModel {
     var header: String
-    var items: [Item] = []
+    var items: [MainTableItem] = []
     
     init(header: String, items: [Item]) {
         self.header = header
@@ -18,9 +18,7 @@ struct SectionModel {
 }
 
 extension SectionModel: SectionModelType {
-  typealias Item = CharacterModel
-
-   init(original: SectionModel, items: [Item]) {
+   init(original: SectionModel, items: [MainTableItem]) {
     self = original
     self.items = items
   }

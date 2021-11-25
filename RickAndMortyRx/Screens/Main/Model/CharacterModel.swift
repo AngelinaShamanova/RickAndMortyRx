@@ -17,7 +17,12 @@ struct InfoModel: Decodable {
     var next: String?
 }
 
-public struct CharacterModel: Decodable {
+public struct CharacterModel: Decodable, Equatable {
+    
+    public static func == (lhs: CharacterModel, rhs: CharacterModel) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     let id: Int
     let name: String
     let species: String

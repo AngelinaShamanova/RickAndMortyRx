@@ -8,7 +8,13 @@
 import UIKit
 
 class MainTableView: UITableView {
-
+    
+    let refreshIndicator: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .white
+        return refreshControl
+    }()
+    
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         configureTableView()
@@ -20,6 +26,8 @@ class MainTableView: UITableView {
     }
     
     private func configureTableView() {
+        
+        refreshControl = refreshIndicator
         backgroundColor = .magenta.withAlphaComponent(0.15)
         delegate = self
         showsVerticalScrollIndicator = false

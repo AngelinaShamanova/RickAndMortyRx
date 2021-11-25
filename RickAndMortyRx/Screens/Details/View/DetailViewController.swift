@@ -7,10 +7,22 @@
 
 import UIKit
 import SnapKit
+import ReactorKit
+import RxSwift
 
-class DetailViewController: UIViewController {
+protocol DetailViewControllerDelegate: AnyObject {
+    func controller(_ controller: DetailViewController, askRemoveCharacterBy index: Int)
+}
+
+class DetailViewController: UIViewController, View {
     
+    typealias Reactor = DetailViewModel
+    
+    weak var coordinator: DetailViewControllerDelegate?
+    
+    var disposeBag = DisposeBag()
     var character: CharacterModel
+    var characterIndex: Int
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -28,9 +40,11 @@ class DetailViewController: UIViewController {
         return textView
     }()
     
-    init(character: CharacterModel) {
+    init(viewModel: DetailViewModel, character: CharacterModel, index: Int) {
         self.character = character
+        self.characterIndex = index
         super.init(nibName: nil, bundle: nil)
+        reactor = viewModel
     }
     
     required init?(coder: NSCoder) {
@@ -44,7 +58,12 @@ class DetailViewController: UIViewController {
         configureCharacterInfo()
     }
     
+    func bind(reactor: DetailViewModel) {
+        
+    }
+    
     private func configureCharacterInfo() {
+        
         let muttableString = NSMutableAttributedString()
         
         let mainColor: UIColor = .white
@@ -65,6 +84,7 @@ class DetailViewController: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .lightGray
+        addNavigationBarButton(imageName: "trash", action: #selector(removeCharacter))
         
         addSubviews()
         addConstraints()
@@ -87,5 +107,15 @@ class DetailViewController: UIViewController {
             make.centerX.equalTo(imageView)
             make.leading.trailing.bottom.equalToSuperview()
         }
+    }
+    
+    @objc private func removeCharacter() {
+        
+        //TODO: - Пересмотреть логику
+        
+//        showAlert("Are you sure you want to delete the character?", action: "Yes", cancel: "Cancel", actionHandler:  { [unowned self] _ in
+//
+//            self.coordinator?.controller(self, askRemoveCharacterBy: self.characterIndex)
+//        })
     }
 }
